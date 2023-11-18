@@ -22,24 +22,12 @@
         width: 300px;
     }
 </style>
-<h1>Пройдите регистрацию</h1>
-<form action="" method="post">
-    Введите ваш email: <input id="m1" name="email">
-    Введите ваш пароль: <input id="p1" name="password" type="password">
-    Повторите ваш пароль: <input id="p2" type="password">
 
-    <button  class="btn btn-success ko" id="btn1">Зарегестрироваться</button>
+<form>
+    <a href="/registration">Регистрация</a>
+    <a href="/login">Авторизация</a>
 
 </form>
 </body>
-<script>
-    btn1.onclick = (e) => {
-        if (p1.value !== p2.value) {
-            e.preventDefault()
-            alert('Пароли не совпадают!')
-        }
 
-    }
-
-</script>
 </html>

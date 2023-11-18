@@ -21,10 +21,21 @@ def reverse(request):
 
 
 @csrf_exempt
-def koko(request):
+def reg(request):
         sasha = TestModel()
         if request.method == 'POST':
             sasha.email = request.POST['email']
             sasha.password = request.POST['password']
             sasha.save()
-        return render(request, 'forma.html', {'name': sasha.email})
+            return HttpResponse('Email' + ' ' + sasha.email + ' ' + "успешно зарегистрирован!")
+        return render(request, 'forma.html')
+
+def index(request):
+    return render (request, 'index.html')
+
+
+@csrf_exempt
+def login(request):
+    return render (request, 'login.html')
+
+
